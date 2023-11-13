@@ -9,7 +9,6 @@ import { IProduct } from './product.module';
 export class CatalogComponent {
   products: any;
   filter: string = ' ';
-  cart : IProduct[] = [];
 
   constructor() {
     this.products = [
@@ -189,11 +188,7 @@ export class CatalogComponent {
     ];
   }
 
-  addToCart(product: IProduct){
-    this.cart.push(product);
-    console.log(`product ${product.name} added to cart`)
-  }
-
+  addToCart(product: IProduct) {}
 
   getFilteredProducts() {
     return this.filter === ''
