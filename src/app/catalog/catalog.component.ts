@@ -4,13 +4,13 @@ import { IProduct } from './product.module';
 @Component({
   selector: 'bot-catalog',
   templateUrl: './catalog.component.html',
-  styleUrls: ['./catalog.component.css']
+  styleUrls: ['./catalog.component.css'],
 })
 export class CatalogComponent {
   products: any;
-  filter: string = ' '
+  filter: string = ' ';
 
-  constructor(){
+  constructor() {
     this.products = [
       {
         id: 1,
@@ -188,18 +188,25 @@ export class CatalogComponent {
     ];
   }
 
-  getImageUrl(product: IProduct){
-    if(!product){
-      return ''
-    };
+  getImageUrl(product: IProduct) {
+    if (!product) {
+      return '';
+    }
     return '/assets/images/robot-parts/' + product.imageName;
   }
 
-  getFilteredProducts(){
-    return this.filter ===''
-    ? this.products
-    : this.products.filter((product: any)=> {
-      return product.category === this.filter
-    })
+  getFilteredProducts() {
+    return this.filter === ''
+      ? this.products
+      : this.products.filter((product: any) => {
+          return product.category === this.filter;
+        });
+  }
+  getDiscountedClasses(product : IProduct){
+    if(product.discount > 0 ){
+      return ['strikethrough']
+    } else{
+      return []
+    }
   }
 }
