@@ -7,7 +7,7 @@ import { IProduct } from './product.module';
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent {
-  products: IProduct[];
+  products: any;
   filter: string = ' '
 
   constructor(){
@@ -189,13 +189,16 @@ export class CatalogComponent {
   }
 
   getImageUrl(product: IProduct){
+    if(!product){
+      return ''
+    };
     return '/assets/images/robot-parts/' + product.imageName;
   }
 
   getFilteredProducts(){
     return this.filter ===''
     ? this.products
-    : this.products.filter((product)=> {
+    : this.products.filter((product: any)=> {
       return product.category === this.filter
     })
   }
