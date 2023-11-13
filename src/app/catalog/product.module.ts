@@ -5,5 +5,5 @@ export interface IProduct{
     imageName: string;
     category: string;
     price:  number;
-    disount: number;
+    discount: number;
 }
