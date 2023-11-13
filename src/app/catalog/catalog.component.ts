@@ -187,7 +187,6 @@ export class CatalogComponent {
       },
     ];
   }
-
   getImageUrl(product: IProduct) {
     if (!product) {
       return '';

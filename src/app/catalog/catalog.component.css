@@ -3,6 +3,10 @@
   font-size: 18px;
 }
 
+.bold{
+  font-weight: bold;
+}
+
 a{
   font-weight: bold;
 }
