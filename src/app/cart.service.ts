@@ -13,4 +13,4 @@ export class CartService {
     this.cart.push(product);
     console.log(`product ${product.name} added to cart`);
   }
-} 
+}  
