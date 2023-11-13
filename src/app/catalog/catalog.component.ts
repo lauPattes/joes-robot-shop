@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; 
 import { IProduct } from './product.module';
 
 @Component({
@@ -19,5 +19,9 @@ export class CatalogComponent {
       price: 945.0,
       disount: 0.2, 
     };
+  }
+
+  getImageUrl(product: IProduct){
+    return '/assets/images/robot-parts/' + product.imageName;
   }
 }
