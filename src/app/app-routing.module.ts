@@ -20,8 +20,12 @@ const routes: Routes = [
     path: 'cart',
     component: CartComponent,
     title: "Cart- Joe's Robot Shop"
+  },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
   }
-  
 ];
 
 
