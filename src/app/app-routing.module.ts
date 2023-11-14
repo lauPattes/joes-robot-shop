@@ -11,20 +11,20 @@ const routes: Routes = [
     title: "Home - Joe's Robot Shop",
   },
   {
-    path: 'catalog',
+    path: 'catalog/:filter',
     component: CatalogComponent,
     title: "Catalog - Joe's Robot Shop",
   },
   {
     path: 'cart',
     component: CartComponent,
-    title: "Cart- Joe's Robot Shop"
+    title: "Cart- Joe's Robot Shop",
   },
   {
     path: '',
     redirectTo: '/home',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];
 
 
