@@ -22,7 +22,7 @@ export class CatalogComponent {
       this.products = products;
     });
   }
-
+  
   addToCart(product: IProduct) {
     this.cartSvc.add(product);
   }
